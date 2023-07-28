@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useSelector } from "react-redux/es";
+import "./App.css";
+import DisplayWidthOfWindow from "./components/DisplayWidthOfWindow";
+import Form from "./components/Form";
+import Header from "./components/Header";
+import Posts from "./components/Posts";
 
 function App() {
+  const postPage = useSelector((state) => state.data.postPagerender);
+  const formPage = useSelector((state) => state.data.formPagerender);
+  const windowPage = useSelector((state) => state.data.windowWidthPagerender);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      {postPage && <Posts />}
+      {formPage && <Form />}
+      {windowPage && <DisplayWidthOfWindow />}
     </div>
   );
 }

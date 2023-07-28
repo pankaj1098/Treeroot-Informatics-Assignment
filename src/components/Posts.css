@@ -1,0 +1,38 @@
+.loading_data {
+  font-size: xx-large;
+
+  text-align: center;
+  justify-content: center;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  padding: 0% 5%;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+h2 {
+  margin: 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+p {
+  margin-top: 5px;
+}
